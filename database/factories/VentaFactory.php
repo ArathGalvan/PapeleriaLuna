@@ -18,7 +18,6 @@ class VentaFactory extends Factory
     {
         return [
             'cliente_id'=> \App\Models\Cliente::all()->random()->id,
-            'fecha_hora'=>fake()->dateTimeBetween('-1 year','now'),
         ];
     }
 }

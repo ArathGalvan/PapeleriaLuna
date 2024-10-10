@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Inventario extends Model
 {
+    protected $fillable =[
+        'producto_id',
+        'cantidad',
+
+    ];
     use HasFactory;
-    
+    public function productos(){
+        return $this->belongsToMany(Producto::class);
+        
+    }
 }

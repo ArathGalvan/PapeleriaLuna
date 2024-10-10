@@ -17,6 +17,7 @@ class ProductoFactory extends Factory
     public function definition(): array
     {
         return [
+            'id'=> \App\Models\Producto::all()->random()->id,
             'nombre'=> fake()->name(),
             'descripcion'=> fake()->name(),
             'categoria'=> fake()->name(),

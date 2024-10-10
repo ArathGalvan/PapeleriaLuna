@@ -17,7 +17,7 @@ class InventarioFactory extends Factory
     public function definition(): array
     {
         return [
-            'producto_id'=> \App\Models\Inventario::all()->random()->id,
+            'producto_id'=> \App\Models\Producto::all()->random()->id,
             'cantidad' =>fake()->numberBetween(1, 100),
         ];
     }
